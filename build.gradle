@@ -9,14 +9,18 @@ repositories {
     mavenCentral()
 }
 
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     // Selenide
-    testImplementation("com.codeborne:selenide:6.4.0")
-    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.32")
+    testImplementation("com.codeborne:selenide:6.4.0") //Для написания тестов
+    testRuntimeOnly("org.slf4j:slf4j-simple:1.7.32")   //Используется при запуске кода. Увеличивает кол-во логов
 
     // JUnit 5
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")  //Для написания тестов
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")  //Используется при запуске кода
 }
 
 test {
